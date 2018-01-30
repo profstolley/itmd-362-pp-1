@@ -27,7 +27,14 @@ function is_probably_phone(phone) {
 }
 
 function is_probably_email(email) {
-
+  var result = false; // assume the worst
+  // Check to make sure there are no whitespace characters, which
+  // are about all that's NOT allowed in an email address, and
+  // also ensure that there's not another @ after the first one.
+  if ((/^[^\s@]+@[^\s@]+$/).test(email)) {
+    result = true;
+  }
+  return result;
 }
 
 function is_eighteen(birthday) {
