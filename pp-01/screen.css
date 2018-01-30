@@ -217,3 +217,7 @@ label {
 form li {
   padding-bottom: 1.182em; /* 26 / 22 = 1.182em */
 }
+
+.success {
+  padding: 2.364em 0.682em 1.182em 0.682em; /* 52,15,26,15 in TRouBLe order: Top Right Bottom Left */
+}
