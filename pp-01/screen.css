@@ -173,3 +173,18 @@ textarea {
 
 
 /* Begin site styles below */
+
+html {
+  font-size: 1.375em; /* 22 / 16 = 1.375em */
+  line-height: 1.182em; /* 26 / 22 = 1.182em */
+}
+
+input {
+  display: block; /* Display as block, not default inline */
+  line-height: 1; /* Collapse line-height; let padding handle the spacing */
+  padding: 15px; /*
+                    15px all around; 2 lines = 52px; line-height: 1 (22px) for text means
+                    52 - 22px = 30px of padding required
+                 */
+  border: 0;
+}
