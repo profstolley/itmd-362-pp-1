@@ -188,9 +188,9 @@ input {
   display: block; /* Display as block, not default inline */
   box-sizing: border-box; /* Subtract padding from width... */
   width: 100%; /* ...to make responsive, full-width form element */
-  padding: 15px; /*
-                    15px all around; 2 lines = 52px; line-height: 1 (22px) for text means
-                    52 - 22px = 30px of padding required
+  padding: 0.682em; /* 15 / 22 = 0.682
+                      15px all around; 2 lines = 52px; line-height: 1 (22px) for text means
+                      52 - 22px = 30px of padding required
                  */
   border: 0; /* No border */
   background: #DDD; /* Let background define form areas */
