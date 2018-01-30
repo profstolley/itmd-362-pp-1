@@ -196,7 +196,6 @@ input {
   background: #DDD; /* Let background define form areas */
   font-family: Helvetica, Arial, sans-serif; /* Sans typeface on inputs */
   line-height: 1; /* Collapse line-height; let padding handle the spacing */
-
 }
 input:focus {
   background: #EEE;
@@ -208,6 +207,12 @@ input[type='submit'] {
   color: #FFF;
   border-radius: .3em;
 }
+label {
+  display: block; /* Surprise! Labels display inline by default */
+  padding-left: 0.682em; /* Align labels to text in input fields; 15px from input padding */
+  padding-bottom: 0.591em; /* Add half a line to open up the form a bit more; 13 / 22 = 0.591 */
+}
+
 form li {
   padding-bottom: 1.182em; /* 26 / 22 = 1.182em */
 }
