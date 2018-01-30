@@ -195,6 +195,16 @@ input {
   border: 0; /* No border */
   background: #DDD; /* Let background define form areas */
 }
+input:focus {
+  background: #EEE;
+}
+input[type='submit'] {
+  width: 50%;
+  float: right;
+  background: #229;
+  color: #FFF;
+  border-radius: .3em;
+}
 form li {
   padding-bottom: 1.182em; /* 26 / 22 = 1.182em */
 }
