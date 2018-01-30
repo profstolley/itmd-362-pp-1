@@ -181,6 +181,7 @@ html {
 }
 h1 {
   padding-bottom: 2.364em; /* 52 / 22 = 2.364 em */
+  padding-left: 0.682em; /* Align with label text; 15px from input padding */
   font-weight: bold;
 }
 
