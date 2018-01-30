@@ -181,19 +181,22 @@ html {
 }
 h1 {
   padding-bottom: 2.364em; /* 52 / 22 = 2.364 em */
+  font-weight: bold;
 }
 
 input {
   display: block; /* Display as block, not default inline */
   box-sizing: border-box; /* Subtract padding from width... */
   width: 100%; /* ...to make responsive, full-width form element */
-  line-height: 1; /* Collapse line-height; let padding handle the spacing */
   padding: 15px; /*
                     15px all around; 2 lines = 52px; line-height: 1 (22px) for text means
                     52 - 22px = 30px of padding required
                  */
   border: 0; /* No border */
   background: #DDD; /* Let background define form areas */
+  font-family: Helvetica, Arial, sans-serif; /* Sans typeface on inputs */
+  line-height: 1; /* Collapse line-height; let padding handle the spacing */
+
 }
 input:focus {
   background: #EEE;
