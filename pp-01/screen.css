@@ -185,6 +185,8 @@ h1 {
 
 input {
   display: block; /* Display as block, not default inline */
+  box-sizing: border-box; /* Subtract padding from width... */
+  width: 100%; /* ...to make responsive, full-width form element */
   line-height: 1; /* Collapse line-height; let padding handle the spacing */
   padding: 15px; /*
                     15px all around; 2 lines = 52px; line-height: 1 (22px) for text means
