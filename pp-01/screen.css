@@ -177,6 +177,10 @@ textarea {
 html {
   font-size: 1.375em; /* 22 / 16 = 1.375em */
   line-height: 1.182em; /* 26 / 22 = 1.182em */
+  padding: 1.182em; /* 26 / 22 = 1.182em */
+}
+h1 {
+  padding-bottom: 2.364em; /* 52 / 22 = 2.364 em */
 }
 
 input {
@@ -186,5 +190,9 @@ input {
                     15px all around; 2 lines = 52px; line-height: 1 (22px) for text means
                     52 - 22px = 30px of padding required
                  */
-  border: 0;
+  border: 0; /* No border */
+  background: #DDD; /* Let background define form areas */
+}
+form li {
+  padding-bottom: 1.182em; /* 26 / 22 = 1.182em */
 }
