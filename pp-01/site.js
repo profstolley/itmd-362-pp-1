@@ -38,5 +38,35 @@ function is_probably_email(email) {
 }
 
 function is_eighteen(birthday) {
+  var result = false; // assume the worst
+  // remember that birthday is returned by the form as a string, in ISO-date format:
+  // YYYY-MM-DD
+  // crate an object to hold the birthday date components
+  var birth = {};
+  // create a similar object to hold today's date components
+  var now = {};
+  // Birthday data
+  birth.raw = birthday.split('-'); // get an array of number strings, split at the hyphen
+  // [YYYY,MM,DD]
+  // Use the Number() constructor to be sure we're working on numbers below
+  birth.year = Number(birth.raw[0]);
+  birth.date = Number(birth.raw[1] + birth.raw[2]); // they're still strings, so this will concatenate
+  // Today's data
+  now.raw = new Date();
+  now.year = now.raw.getFullYear(); // no need for number conversation, as Date objects return them
+  now.day = now.raw.getDate();
+  now.month = now.raw.getMonth() + 1; // getMonth returns 0 thru 11!
+  // This is a little trickier; we want to concatenate the month and day,
+  // but then turn the concatenated version into a number to compare below:
+  now.date = Number(now.month.toString() + now.day.toString());
 
+  // Now let's get on with the main monkey business
+  if(now.year - birth.year > 18) {
+    result = true; // they're 19 or older, just by the year; we can stop
+  }
+  if((now.year - birth.year === 18) && (now.date >= birth.date)) {
+    result = true; // their birthday was 18 years ago, AND they've a birthday, even if it's today
+  }
+
+  return result;
 }
