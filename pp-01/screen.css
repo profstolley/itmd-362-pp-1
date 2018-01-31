@@ -221,3 +221,6 @@ form li {
 .success {
   padding: 2.364em 0.682em 1.182em 0.682em; /* 52,15,26,15 in TRouBLe order: Top Right Bottom Left */
 }
+.warn {
+  color: red;
+}

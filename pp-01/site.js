@@ -1,12 +1,12 @@
 $('#user').on('submit', function(e) {
   if(!is_probably_phone($('#phone').val())) {
-    console.log("Phone has a problem");
+    $('label[for="phone"]').text('Check your phone number:').addClass('warn');
   }
   else if(!is_probably_email($('#email').val())) {
-    console.log("Email has a problem");
+    $('label[for="email"]').text('Check your email address:').addClass('warn');
   }
   else if(!is_eighteen($('#birthday').val())) {
-    console.log("They're not eighteen years old");
+    $('label[for="birthday"]').text('Check your birthday. You must be 18:').addClass('warn');
   }
   else {
     console.log($('#phone').val(), $('#email').val(), $('#birthday').val());
