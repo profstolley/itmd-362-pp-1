@@ -20,6 +20,7 @@
 
   function is_probably_phone(phone) {
     var result = false; // assume the worst :)
+    var cleaned;
     // strip the phone string down to digits
     // First, do a global match for any digit characters,
     // which come back as an array.
@@ -31,7 +32,7 @@
     // will do is make sure there are ten digits in there
     // SOMEWHERE.
     if (phone.length > 0) {
-      var cleaned = phone.match(/\d+/g).join('');
+      cleaned = phone.match(/\d+/g).join('');
       // Then, just test the length of the string of digits,
       // which should be at least 10 for a US number:
       // 123-456-7890
@@ -57,18 +58,19 @@
 
   function is_eighteen(birthday) {
     var result = false; // assume the worst
+    var birth, now;
 
     // remember that birthday is returned by the form as a string, in ISO-date format:
     // YYYY-MM-DD - NOT in the localized format displayed in browsers that understand
     // type="date", which in the US is mm/dd/yyyy
     if (birthday.length > 0) {
       // create an object to hold the birthday date components
-      var birth = {
+      birth = {
         raw: birthday.split('-') // get an array of number strings, split at the hyphen [YYYY,MM,DD]
       };
 
       // create a similar object to hold today's date components
-      var now = {
+      now = {
         raw: new Date()
       };
 
