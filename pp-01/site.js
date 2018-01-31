@@ -1,4 +1,13 @@
 $('#user').on('submit', function(e) {
+  if(is_probably_phone($('#phone').val())) {
+    console.log("Phone looks good");
+  }
+  if(is_probably_email($('#email').val())) {
+    console.log("Email looks good");
+  }
+  if(is_eighteen($('#birthday').val())) {
+    console.log("They're eighteen years old");
+  }
   $(this).remove();
   $('#primary').append('<p class="success">Thank you. Your information has been saved.</p>');
   e.preventDefault();
