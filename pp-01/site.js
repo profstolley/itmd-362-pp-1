@@ -1,15 +1,19 @@
 $('#user').on('submit', function(e) {
-  if(is_probably_phone($('#phone').val())) {
-    console.log("Phone looks good");
+  if(!is_probably_phone($('#phone').val())) {
+    console.log("Phone has a problem");
   }
-  if(is_probably_email($('#email').val())) {
-    console.log("Email looks good");
+  else if(!is_probably_email($('#email').val())) {
+    console.log("Email has a problem");
   }
-  if(is_eighteen($('#birthday').val())) {
-    console.log("They're eighteen years old");
+  else if(!is_eighteen($('#birthday').val())) {
+    console.log("They're not eighteen years old");
   }
-  $(this).remove();
-  $('#primary').append('<p class="success">Thank you. Your information has been saved.</p>');
+  else {
+    console.log($('#phone').val(), $('#email').val(), $('#birthday').val());
+    $(this).remove();
+    $('#primary').append('<p class="success">Thank you. Your information has been saved.</p>');
+  }
+  // Always prevent the default submission behavior
   e.preventDefault();
 });
 
