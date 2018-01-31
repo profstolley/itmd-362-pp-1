@@ -20,7 +20,7 @@ function is_probably_phone(phone) {
   // Then, just test the length of the string of digits,
   // which should be at least 10 for a US number:
   // 123-456-7890
-  if(cleaned.length() >= 10) {
+  if(cleaned.length >= 10) {
     result = true;
   }
   return result;
